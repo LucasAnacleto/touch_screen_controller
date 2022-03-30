@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://modules/touch_screen_controller/analog/stick.gd" type="Script" id=1]
+[ext_resource path="res://modules/touch_screen_controller/assets/lineLight/lineLight38.png" type="Texture" id=2]
+[ext_resource path="res://modules/touch_screen_controller/assets/lineDark/lineDark35.png" type="Texture" id=3]
+[ext_resource path="res://modules/touch_screen_controller/assets/lineLight/lineLight09.png" type="Texture" id=4]
+
+[node name="TouchControllerAnalog" type="CanvasLayer"]
+
+[node name="Node2D" type="Node2D" parent="."]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Joy" type="Sprite" parent="Node2D"]
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 4 )
+
+[node name="JoyStick" type="TouchScreenButton" parent="Node2D/Joy"]
+normal = ExtResource( 2 )
+pressed = ExtResource( 3 )
+script = ExtResource( 1 )
